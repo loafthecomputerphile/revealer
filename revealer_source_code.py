@@ -24,8 +24,8 @@ while not isinstance(op, str) or op not in validchars:
 	print("invalid input")
 	op = input("do you want to save the passwords? [y/n]:")
 
-if op == "y" or op == "Y":
-	f = open("passwords.txt", "wt")
+if op.lower() == "y":
+	f = open("passwords.txt", "w")
     
 	for j in range(len(i)):
 		f.write(f"{names[j]} - {passwords[j]}")
